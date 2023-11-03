@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+.chatbox {
+  border: 2px solid grey;
+  border-radius: 4px;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: blanchedalmond;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.me .chatbox {
+  background-color: aquamarine;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.container.me {
+  flex-direction: row-reverse;
+}
+
+.btm {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  bottom: 2px;
+}
+
+.btm input {
+  padding: 10px 0;
+  flex-grow: 1;
+}
+.btm button {
+  padding: 10px 0;
+}
+
+.chatroom-container {
+  height: 70vh;
+  overflow-y: scroll;
+  border: 1px solid black;
+}
+
+.authBtn {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 25vh;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.authBtnStyle {
+  font-size: medium;
+  color: aliceblue;
+  background-color: rgb(198, 37, 37);
+  border-radius: 4px;
+  border-color: rgb(198, 37, 37);
 }
